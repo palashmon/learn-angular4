@@ -1,5 +1,6 @@
-.title:not(:last-child),
-.subtitle:not(:last-child) {
+.title,
+.subtitle {
+  margin: 0px;
   margin-bottom: 1.5rem;
 }
 
