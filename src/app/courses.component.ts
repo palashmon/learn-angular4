@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
   template: `
     <h2 class="subtitle">{{ title }}</h2>
     <ul>
-        <li *ngFor="let course of courses">
-            {{ course }}
+        <li *ngFor="let course of courses; let i=index">
+            {{i + 1}} - {{ course }}
         </li>
     </ul>
   `
