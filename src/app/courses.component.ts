@@ -4,7 +4,11 @@ import { Component } from '@angular/core';
     selector: 'app-courses',
     template: `
         <h2 class="subtitle">{{ title }}</h2>
-        <img [src]="imageUrl" [alt]="altText" />
+        <table>
+            <tr>
+                <td [attr.colspan]="colSpan">Hello World!</td>
+            </tr>
+        </table>
     `
 })
 export class CoursesComponent {
@@ -17,6 +21,5 @@ export class CoursesComponent {
     //     this.courses = service.getCourses();
     // }
 
-    imageUrl = 'http://unsplash.it/458/354';
-    altText = 'A sample image';
+    colSpan = 2;
 }
