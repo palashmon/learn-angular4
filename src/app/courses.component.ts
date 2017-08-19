@@ -1,3 +1,4 @@
+import { CoursesService } from './courses.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -15,5 +16,9 @@ export class CoursesComponent {
     title = 'List of course';
 
     // Here we have an static array for demo
-    courses = ['Course 1', 'Course 2', 'Course 3'];
+    courses;
+
+    constructor(service: CoursesService) {
+        this.courses = service.getCourses();
+    }
 }
