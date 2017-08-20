@@ -5,11 +5,18 @@ import { Component } from '@angular/core';
     template: `
         <p class="lead">{{ title }}</p>
         <p>
-            <button [style.fontSize.px]="isImportant ? '30' : '16'">Primary</button>
+            <button [ngStyle]="moreStyles">Primary</button>
         </p>
     `
 })
 export class CoursesComponent {
     title = 'List of course';
     isImportant = true;
+
+    // moreStyles is a property in the component that contains an object with css property names as the keys
+    moreStyles = {
+        'background-color': '#369',
+        'font-size': this.isImportant ? '25px' : '16px',
+        color: 'white'
+    };
 }
