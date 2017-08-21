@@ -4,12 +4,12 @@ import { Component } from '@angular/core';
     selector: 'app-courses',
     template: `
         <p class="lead">{{ title }}</p>
-        <input (keyup.enter)="onKeyUp()" />
+        <input #username (keyup.enter)="onKeyUp(username)" />
     `
 })
 export class CoursesComponent {
-    title = 'Event Filtering';
-    onKeyUp() {
-        console.log('Enter was pressed!');
+    title = 'Template Variables';
+    onKeyUp(username) {
+        console.log(username.value);
     }
 }
