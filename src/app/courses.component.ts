@@ -3,8 +3,8 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'app-courses',
     template: `
-        Summary(limit: 20): {{ text | summary:20 }} <br/>
-        Summary(limit: 50): {{ text | summary | capitalize }} <br/>
+        <strong>Summary(limit: 25):</strong> {{ text | summary:25 }} <br/>
+        <strong>Summary(limit: 50):</strong> {{ text | summary | capitalize }} <br/>
     `
 })
 export class CoursesComponent {

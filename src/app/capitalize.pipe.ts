@@ -9,7 +9,7 @@ export class CapitalizePipe implements PipeTransform {
         // tslint:disable-next-line:curly
         if (!value) return value;
 
-        return value.replace(/\w\S*/g, function(txt) {
+        return value.trim().replace(/\w\S*/g, function(txt) {
             return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
         });
     }
