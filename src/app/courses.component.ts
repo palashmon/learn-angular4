@@ -3,13 +3,14 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'app-courses',
     template: `
-        <p class="lead">{{ title }}</p>
-        <input #username (keyup.enter)="onKeyUp(username)" />
+        <p>{{ username }}</p>
+        <input [(ngModel)]="username" (keyup.enter)="onKeyUp()" />
     `
 })
 export class CoursesComponent {
-    title = 'Template Variables';
+    username = 'wes';
+
     onKeyUp(username) {
-        console.log(username.value);
+        console.log(this.username);
     }
 }
