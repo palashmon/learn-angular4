@@ -10,4 +10,10 @@ export class AppComponent {
         title: 'Sample Title',
         isFavorite: true
     };
+
+    // Call a function in host component
+    // once a event is emitted by main component
+    onFavoriteChanged() {
+        console.log('Favorite is changed on ' + Date.now());
+    }
 }

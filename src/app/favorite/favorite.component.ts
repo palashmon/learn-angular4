@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'app-favorite',
@@ -9,6 +9,8 @@ export class FavoriteComponent implements OnInit {
     // Declare a data-bound input property
     // tslint:disable-next-line:no-input-rename
     @Input('is-favorite') isFavorite: boolean;
+    // tslint:disable-next-line:no-output-rename
+    @Output('on-change') change = new EventEmitter();
 
     constructor() {}
 
@@ -16,5 +18,8 @@ export class FavoriteComponent implements OnInit {
 
     onClick() {
         this.isFavorite = !this.isFavorite;
+
+        // Use emit() method that pushes the event up to the parent component
+        this.change.emit();
     }
 }
