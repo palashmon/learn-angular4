@@ -7,7 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FavoriteComponent implements OnInit {
     // Declare a data-bound input property
-    @Input() isFavorite: boolean;
+    // tslint:disable-next-line:no-input-rename
+    @Input('is-favorite') isFavorite: boolean;
 
     constructor() {}
 
