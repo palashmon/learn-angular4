@@ -20,6 +20,16 @@ export class FavoriteComponent implements OnInit {
         this.isFavorite = !this.isFavorite;
 
         // Use emit() method that pushes the event up to the parent component
-        this.change.emit();
+        // Pass current state of isFavorite variable
+        this.change.emit({
+            newValue: this.isFavorite,
+            status: this.isFavorite ? 'liked' : 'disliked'
+        });
     }
+}
+
+// Create a new interface for the favorite event arguments
+export interface FavoriteEventArgs {
+    newValue: boolean;
+    status: string;
 }
