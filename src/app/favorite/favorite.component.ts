@@ -3,18 +3,23 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 @Component({
     selector: 'app-favorite',
     templateUrl: './favorite.component.html',
-    styleUrls: ['./favorite.component.css']
+    styleUrls: ['./favorite.component.css'],
+
+    // Applying page styling using styles array
+    styles: [
+        `
+        .glyphicon{
+            color: green
+        }
+        `
+    ]
 })
-export class FavoriteComponent implements OnInit {
+export class FavoriteComponent {
     // Declare a data-bound input property
     // tslint:disable-next-line:no-input-rename
     @Input('is-favorite') isFavorite: boolean;
     // tslint:disable-next-line:no-output-rename
     @Output('on-change') change = new EventEmitter();
-
-    constructor() {}
-
-    ngOnInit() {}
 
     onClick() {
         this.isFavorite = !this.isFavorite;
