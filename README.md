@@ -1,6 +1,9 @@
 # Learn Angular4
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/palashmon/learn-angular4.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/palashmon/learn-angular4.svg?branch=master)](https://travis-ci.org/palashmon/learn-angular4)
+[![Dependency Status](https://david-dm.org/palashmon/learn-angular4.svg)](https://david-dm.org/palashmon/learn-angular4)
+[![devDependency Status](https://david-dm.org/palashmon/learn-angular4/dev-status.svg)](https://david-dm.org/palashmon/learn-angular4?type=dev)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.6.
 
