@@ -8,7 +8,7 @@ import { FavoriteEventArgs } from './favorite/favorite.component';
 })
 export class AppComponent {
     post = {
-        title: 'Sample Title',
+        title: 'Passing Event Data',
         isFavorite: true
     };
 
