@@ -9,6 +9,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/cor
 import { AppComponent } from './app.component';
 import { CourseComponent } from './course/course.component';
 import { FavoriteComponent } from './favorite/favorite.component';
+import { PanelComponent } from './panel/panel.component';
 
 @NgModule({
     declarations: [
@@ -17,7 +18,8 @@ import { FavoriteComponent } from './favorite/favorite.component';
         CourseComponent,
         SummaryPipe,
         CapitalizePipe,
-        FavoriteComponent
+        FavoriteComponent,
+        PanelComponent
     ],
     imports: [BrowserModule, FormsModule],
     providers: [CoursesService],
