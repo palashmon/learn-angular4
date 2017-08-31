@@ -20,6 +20,8 @@
 # IDE - VSCode
 .vscode/*
 package-lock.json
+.eslintrc.json
+.eslintignore
 
 # misc
 /.sass-cache
