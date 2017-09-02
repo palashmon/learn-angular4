@@ -2,11 +2,10 @@
 
 <div class="container">
     <h1 class="page-header">Learn Angular</h1>
-    <div *ngIf="courses.length > 0; then coursesList else noCourses"></div>
-    <ng-template #coursesList>
+    <div [hidden]="courses.length === 0">
         List of Courses
-    </ng-template>
-    <ng-template #noCourses>
+    </div>
+    <div [hidden]="courses.length > 0">
         No courses yet
-    </ng-template>
+    </div>
 </div>
