@@ -7,15 +7,5 @@ import { FavoriteEventArgs } from './favorite/favorite.component';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    post = {
-        title: 'Passing Event Data',
-        isFavorite: true
-    };
-
-    // Call a function in host component
-    // once a event is emitted by main component
-    onFavoriteChanged(eventArgs: FavoriteEventArgs) {
-        console.log('Favorite is changed: ');
-        console.log(eventArgs);
-    }
+    courses = [];
 }
