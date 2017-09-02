@@ -7,5 +7,5 @@ import { FavoriteEventArgs } from './favorite/favorite.component';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    courses = [];
+    courses = [1, 2];
 }
