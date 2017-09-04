@@ -7,5 +7,9 @@ import { FavoriteEventArgs } from './favorite/favorite.component';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    viewMode = 'home';
+    courses = [
+        { id: 1, name: 'Course 1' },
+        { id: 2, name: 'Course 2' },
+        { id: 3, name: 'Course 3' }
+    ];
 }

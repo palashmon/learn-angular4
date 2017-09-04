@@ -1,34 +1,11 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
 <div class="container">
-    <h1 class="page-header">Learn Angular</h1>
+    <h2 class="page-header">Learn Angular</h2>
 
-    <!-- Nav tabs -->
-    <ul class="nav nav-pills" role="tablist">
-        <li class="nav-item" [class.active]="viewMode === 'home'">
-            <a class="nav-link" role="tab" (click)="viewMode = 'home'">Home</a>
-        </li>
-        <li class="nav-item" [class.active]="viewMode === 'profile'">
-            <a class="nav-link" role="tab" (click)="viewMode = 'profile'">Profile</a>
-        </li>
-        <li class="nav-item" [class.active]="viewMode === 'messages'">
-            <a class="nav-link" role="tab" (click)="viewMode = 'messages'">Messages</a>
+    <ul>
+        <li *ngFor="let course of courses; even as isEven">
+            {{ course.name }} <span *ngIf="isEven">(even)</span>
         </li>
     </ul>
-
-    <!-- Tab panes -->
-    <div class="tab-content" [ngSwitch]="viewMode">
-        <div *ngSwitchCase="'home'">
-            This is Home
-        </div>
-        <div *ngSwitchCase="'profile'">
-            This is Profile
-        </div>
-        <div *ngSwitchCase="'messages'">
-            This is Messages
-        </div>
-        <div *ngSwitchDefault>
-            No nav selected yet
-        </div>
-    </div>
 </div>
