@@ -3,10 +3,26 @@
 <div class="container">
     <h2 class="page-header">Learn Angular</h2>
 
-    <button (click)="loadCourses()">Load</button>
+    <!-- 
+        ngFor can only be applied to a <template>. 
+        *ngFor is the short form that can be applied to any element and the
+        <template> element is created implicitly behind the scene.
+    -->
     <ul>
-        <li *ngFor="let course of courses; trackBy: trackCourse">
-            {{ course.name }}
+        <li *ngFor="let course of courses; index as i">
+            {{i}} - {{course}}
+        </li>
+    </ul>
+
+    <ul>
+        <template ngFor let-course [ngForOf]="courses" let-i="index">
+            <li>{{i}} - {{course}}</li>
+        </template>
+    </ul>
+
+    <ul>
+        <li template="ngFor let course of courses; index as i">
+            {{i}} - {{course}}
         </li>
     </ul>
 </div>
