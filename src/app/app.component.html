@@ -3,12 +3,10 @@
 <div class="container">
     <h2 class="page-header">Learn Angular</h2>
 
-    <button (click)="onAdd()">Add</button>
+    <button (click)="loadCourses()">Load</button>
     <ul>
-        <li *ngFor="let course of courses; even as isEven">
+        <li *ngFor="let course of courses; trackBy: trackCourse">
             {{ course.name }}
-            <button (click)="onRemove(course)">Remove</button>
-            <button (click)="onChange(course)">Change</button>
         </li>
     </ul>
 </div>
