@@ -3,26 +3,6 @@
 <div class="container">
     <h2 class="page-header">Learn Angular</h2>
 
-    <!-- 
-        ngFor can only be applied to a <template>. 
-        *ngFor is the short form that can be applied to any element and the
-        <template> element is created implicitly behind the scene.
-    -->
-    <ul>
-        <li *ngFor="let course of courses; index as i">
-            {{i}} - {{course}}
-        </li>
-    </ul>
-
-    <ul>
-        <template ngFor let-course [ngForOf]="courses" let-i="index">
-            <li>{{i}} - {{course}}</li>
-        </template>
-    </ul>
-
-    <ul>
-        <li template="ngFor let course of courses; index as i">
-            {{i}} - {{course}}
-        </li>
-    </ul>
+    <span>{{ task.title }}</span>
+    <span>{{ task.assignee?.name }}</span>
 </div>
