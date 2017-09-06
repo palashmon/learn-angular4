@@ -1,3 +1,4 @@
+import { DefaultPipe } from './default.pipe';
 import { SummaryPipe } from './summary.pipe';
 import { CapitalizePipe } from './capitalize.pipe';
 import { CoursesService } from './courses.service';
@@ -18,6 +19,7 @@ import { PanelComponent } from './panel/panel.component';
         CourseComponent,
         SummaryPipe,
         CapitalizePipe,
+        DefaultPipe,
         FavoriteComponent,
         PanelComponent
     ],
