@@ -3,6 +3,6 @@
 <div class="container">
     <h2 class="page-header">Learn Angular</h2>
 
-    <span>{{ task.title }}</span><br/>
-    <span>{{ task.assignee?.name | default: "Not assigned yet"}}</span>
+    <input type="text" [appInputFormat]="'uppercase'">
+    <em>Focus out from textbox to see appInputFormat directive in action</em>
 </div>
