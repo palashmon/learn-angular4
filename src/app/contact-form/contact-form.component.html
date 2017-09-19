@@ -1,10 +1,13 @@
 <h2 class="page-header">Contact Form</h2>
-<form action="">
+<form action="" name="contactForm">
     <div class="form-group">
         <label for="firstName">First Name</label>
-        <input required ngModel #firstName="ngModel" name="firstName" id="firstName" type="text" class="form-control">
-        <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
-            First name is required
+        <input required minlength="3" maxlength="10" ngModel #firstName="ngModel" name="firstName" id="firstName"
+            type="text" class="form-control">
+        <div class="alert alert-danger margin-top-5" *ngIf="firstName.touched && !firstName.valid">
+            <div *ngIf="firstName.errors.required">First name is required</div>
+            <div *ngIf="firstName.errors.maxlength">Your name is too long</div>
+            <div *ngIf="firstName.errors.minlength">Your name is too short</div>
         </div>
     </div>
     <div class="form-group">
