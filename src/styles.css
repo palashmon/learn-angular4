@@ -6,3 +6,7 @@ body {
     color: #24292e !important;
     background-color: #fff !important;
 }
+
+.form-control.ng-touched.ng-invalid {
+    border: 2px solid rgba(236, 157, 157, 0.99);
+}
