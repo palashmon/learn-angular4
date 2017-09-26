@@ -1,13 +1,24 @@
 <h2 class="page-header">Contact Form</h2>
 <form action="" name="contactForm" #myForm="ngForm" (ngSubmit)="submit(myForm)">
-    <div class="form-group">
-        <label for="firstName">First Name</label>
-        <input required minlength="3" maxlength="10" ngModel #firstName="ngModel" name="firstName" id="firstName"
-            type="text" class="form-control">
+    <div ngModelGroup="contact">
         <div class="alert alert-danger margin-top-5" *ngIf="firstName.touched && !firstName.valid">
             <div *ngIf="firstName.errors.required">First name is required</div>
-            <div *ngIf="firstName.errors.maxlength">Your name is too long</div>
-            <div *ngIf="firstName.errors.minlength">Your name is too short</div>
+            <div *ngIf="firstName.errors.maxlength">First name is too long</div>
+            <div *ngIf="firstName.errors.minlength">First name is too short</div>
+        </div>
+        <div class="alert alert-danger margin-top-5" *ngIf="lastName.touched && !lastName.valid">
+            <div *ngIf="lastName.errors.required">Last name is required</div>
+            <div *ngIf="lastName.errors.maxlength">Last name is too long</div>
+        </div>
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input required minlength="3" maxlength="10" ngModel #firstName="ngModel" name="firstName" id="firstName"
+                type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input required maxlength="10" ngModel #lastName="ngModel" name="lastName" id="lastName" type="text"
+                class="form-control">
         </div>
     </div>
     <div class="form-group">
