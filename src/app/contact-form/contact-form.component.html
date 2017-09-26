@@ -1,5 +1,5 @@
 <h2 class="page-header">Contact Form</h2>
-<form action="" name="contactForm">
+<form action="" name="contactForm" #myForm="ngForm" (ngSubmit)="submit(myForm)">
     <div class="form-group">
         <label for="firstName">First Name</label>
         <input required minlength="3" maxlength="10" ngModel #firstName="ngModel" name="firstName" id="firstName"
