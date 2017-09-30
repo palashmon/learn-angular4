@@ -29,6 +29,14 @@
             <option *ngFor="let m of contactMethods" [value]="m.id">{{m.name}}</option>
         </select>
     </div>
+    <div class="form-group">
+        <div *ngFor="let m of contactMethods" class="radio-inline">
+            <label>
+                <input ngModel type="radio" name="contactMethod" [value]="m.id">
+                {{m.name}}
+            </label>
+        </div>
+    </div>
     <button class="btn btn-primary" [disabled]="!myForm.valid">Submit</button>&nbsp;&nbsp;
     <em *ngIf="!myForm.valid">Please enter some text in first name field to enable this button.</em>
     <em *ngIf="myForm.valid">Submit button is enabled now.</em>

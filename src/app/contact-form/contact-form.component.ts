@@ -9,7 +9,11 @@ import { Component } from '@angular/core';
 export class ContactFormComponent {
     firstName: string;
     comment: string;
-    contactMethods = [{ id: 1, name: 'Email' }, { id: 2, name: 'Phone' }];
+    contactMethods = [
+        { id: 1, name: 'Email' },
+        { id: 2, name: 'Phone' },
+        { id: 3, name: 'In Person' }
+    ];
 
     submit(myForm) {
         // If the form is valid then only show the log
