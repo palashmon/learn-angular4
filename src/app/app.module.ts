@@ -1,18 +1,19 @@
-import { DefaultPipe } from './default.pipe';
-import { SummaryPipe } from './summary.pipe';
-import { CapitalizePipe } from './capitalize.pipe';
-import { CoursesService } from './courses.service';
-import { CoursesComponent } from './courses.component';
-import { BrowserModule } from '@angular/platform-browser';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { CourseComponent } from './course/course.component';
-import { FavoriteComponent } from './favorite/favorite.component';
-import { PanelComponent } from './panel/panel.component';
-import { InputFormatDirective } from './input-format.directive';
+import { CapitalizePipe } from './capitalize.pipe';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { CourseComponent } from './course/course.component';
+import { CoursesComponent } from './courses.component';
+import { CoursesService } from './courses.service';
+import { DefaultPipe } from './default.pipe';
+import { FavoriteComponent } from './favorite/favorite.component';
+import { InputFormatDirective } from './input-format.directive';
+import { PanelComponent } from './panel/panel.component';
+import { SignupFormComponent } from './signup-form/signup-form.component';
+import { SummaryPipe } from './summary.pipe';
 
 @NgModule({
     declarations: [
@@ -25,7 +26,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
         FavoriteComponent,
         PanelComponent,
         InputFormatDirective,
-        ContactFormComponent
+        ContactFormComponent,
+        SignupFormComponent
     ],
     imports: [BrowserModule, FormsModule],
     providers: [CoursesService],
