@@ -10,3 +10,7 @@ body {
 .form-control.ng-touched.ng-invalid {
     border: 2px solid rgba(236, 157, 157, 0.99);
 }
+.margin-top-5 {
+    margin-top: 5px;
+    font-size: 12px;
+}
