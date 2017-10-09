@@ -6,6 +6,7 @@
         <div class="alert alert-danger margin-top-5" *ngIf="username.touched && username.invalid">
             <div *ngIf="username.errors.required">Username is required</div>
             <div *ngIf="username.errors.minlength">Username is too short</div>
+            <div *ngIf="username.errors.cannotContainSpace">Username cannot contain space</div>
         </div>
     </div>
     <div class="form-group">
