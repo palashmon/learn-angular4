@@ -2,7 +2,10 @@
 <form [formGroup]="form">
     <div class="form-group">
         <label for="username">Username</label>
-        <input id="username" type="text" class="form-control" formControlName="username">
+        <input id="username" type="text" class="form-control" formControlName="username" autocomplete="off">
+        <div *ngIf="username.pending" class="alert alert-warning margin-top-5">
+            Checking username...
+        </div>
         <div class="alert alert-danger margin-top-5" *ngIf="username.touched && username.invalid">
             <div *ngIf="username.errors.required">Username is required</div>
             <div *ngIf="username.errors.minlength">Username is too short</div>
