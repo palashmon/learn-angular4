@@ -10,4 +10,18 @@ export class UsernameValidators {
         }
         return null;
     }
+
+    // Create a static method to simulate async server call
+    // and check if username is unique or not
+    static shouldBeUnique(control: AbstractControl): Promise<ValidationErrors | null> {
+        return new Promise((resolve, reject) => {
+            setTimeout(function () {
+                if ((control.value as string).trim() === 'palash') {
+                    resolve({ shouldBeUnique: true });
+                } else {
+                    resolve(null);
+                }
+            }, 2000);
+        });
+    }
 }
