@@ -1,5 +1,11 @@
 <h2 class="page-header">Signup Form</h2>
-<form [formGroup]="form">
+<form [formGroup]="form" (ngSubmit)="login()">
+    <div class="alert alert-danger margin-top-5" *ngIf="form.errors">
+        The username or password is invalid
+    </div>
+    <pre *ngIf="form.errors">
+        {{ form.errors | json }}
+    </pre>
     <div class="form-group">
         <label for="username">Username</label>
         <input id="username" type="text" class="form-control" formControlName="username" autocomplete="off">

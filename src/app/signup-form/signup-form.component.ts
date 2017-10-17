@@ -19,6 +19,13 @@ export class SignupFormComponent {
         password: new FormControl('', Validators.required),
     });
 
+    // Validate form on submit
+    login() {
+        this.form.setErrors({
+            invalidLogin: true
+        });
+    }
+
     //#region Properties
 
     // Get username from "form" field above
