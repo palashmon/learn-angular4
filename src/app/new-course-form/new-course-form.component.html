@@ -1,0 +1,9 @@
+<h2 class="page-header">New Course Form 2</h2>
+<form action="">
+    <input type="text" class="form-control" (keyup.enter)="addTopic(topic)" #topic>
+    <ul class="list-group">
+        <li *ngFor="let topic of topics.controls" class="list-group-item" (click)="removeTopic(topic)">
+            {{topic.value}}
+        </li>
+    </ul>
+</form>

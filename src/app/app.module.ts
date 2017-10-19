@@ -14,6 +14,7 @@ import { InputFormatDirective } from './input-format.directive';
 import { PanelComponent } from './panel/panel.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { SummaryPipe } from './summary.pipe';
+import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 
 @NgModule({
     declarations: [
@@ -27,7 +28,8 @@ import { SummaryPipe } from './summary.pipe';
         PanelComponent,
         InputFormatDirective,
         ContactFormComponent,
-        SignupFormComponent
+        SignupFormComponent,
+        NewCourseFormComponent
     ],
     imports: [BrowserModule, FormsModule, ReactiveFormsModule],
     providers: [CoursesService],
