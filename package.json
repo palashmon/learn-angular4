@@ -46,23 +46,5 @@
         "ts-node": "^4.0.1",
         "tslint": "^5.7.0",
         "typescript": "2.5.2"
-    },
-    "greenkeeper": {
-        "ignore": [
-            "@angular/cli",
-            "@angular/animations",
-            "@angular/animations",
-            "@angular/common",
-            "@angular/compiler",
-            "@angular/core",
-            "@angular/forms",
-            "@angular/http",
-            "@angular/platform-browser",
-            "@angular/platform-browser-dynamic",
-            "@angular/router",
-            "@angular/compiler-cli",
-            "@angular/language-service",
-            "typescript"
-        ]
     }
 }
